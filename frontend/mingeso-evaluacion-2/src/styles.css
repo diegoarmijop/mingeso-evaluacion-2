@@ -1,0 +1,33 @@
+/* Estilos para el contenedor del menú */
+.menu-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura del 100% del viewport para centrar en vertical */
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    color: #333;
+    margin: 10px auto;
+    padding: 7px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
