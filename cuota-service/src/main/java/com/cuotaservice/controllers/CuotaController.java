@@ -28,7 +28,7 @@ public class CuotaController {
     @GetMapping("/{idEstudiante}")
     public ResponseEntity<Map<String, Object>> mostrarCuotas(@PathVariable Long idEstudiante) {
 
-        List<CuotaEntity> cuotas = cuotaService.obtenerCuotasConInteres(idEstudiante);
+        List<CuotaEntity> cuotas = cuotaService.obtenerCuotasEstudiante(idEstudiante);
         EstudianteModel estudiante = cuotaService.buscarEstudiante(idEstudiante);
 
         Map<String, Object> respuesta = new HashMap<>();

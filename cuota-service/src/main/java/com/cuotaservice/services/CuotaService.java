@@ -80,7 +80,6 @@ public class CuotaService {
 
     @Transactional
     public void generarCuotas(Long idEstudiante){
-
         EstudianteModel estudiante = buscarEstudiante(idEstudiante);
 
         double arancel = 1500000.0;
@@ -197,27 +196,6 @@ public class CuotaService {
         } else {
             return 0.0;
         }
-    }
-
-
-    public List<CuotaEntity> obtenerCuotasConInteres(Long idEstudiante) {
-        List<CuotaEntity> cuotas = obtenerCuotasEstudiante(idEstudiante);
-        EstudianteModel estudiante = buscarEstudiante(idEstudiante);
-        Double puntajePromedio = obtenerPuntajePromedio(estudiante.getRut());
-        Double descuento = calcularDescuento(puntajePromedio);
-
-        cuotas.forEach(cuota -> {
-            if(!cuota.getTipo().equals("Matricula")){
-                if(!cuota.getTipo().equals("Unica Cuota")){
-                    if(!cuota.getEstado()){
-                        cuota.setMonto(calcularInteres(cuota));
-                        cuota.setMonto(cuota.getMonto() * (1 - descuento));
-                    }
-                }
-            }
-        });
-
-        return cuotas;
     }
 
     public Double MontoTotal(Long idEstudiante){

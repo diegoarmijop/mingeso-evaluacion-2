@@ -80,10 +80,6 @@ function Cuotas() {
             <p>Apellidos: {estudiante.apellidos}</p>
             <p>Nombres: {estudiante.nombres}</p>
 
-            <div style={{ textAlign: 'center', marginTop: '20px' }}>
-                <a href={`/examenes/resumen/${id}`} className="btnResumen">Ver Resumen</a>
-            </div>
-
             <h2>Cuotas</h2>
             <table border="1">
                 <thead>
