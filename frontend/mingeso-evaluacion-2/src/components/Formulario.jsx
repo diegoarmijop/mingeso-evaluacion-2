@@ -49,6 +49,7 @@ function Formulario() {
                 throw new Error('Error al guardar el estudiante');
             }
 
+
             alert('Estudiante guardado con éxito');
             setFormData({
                 rut: '',
@@ -67,6 +68,7 @@ function Formulario() {
             alert('Hubo un error al guardar el estudiante. Por favor, inténtalo de nuevo.');
         }
 
+    
     };
 
     const handleTipoColegioChange = () => {
@@ -109,7 +111,7 @@ function Formulario() {
 
     return (
         <div>
-            <div className="titulo-formulario">Formulario Registro Estudiante</div>
+            <div className="titulo-formulario">Formulario estudiante</div>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="rut">Rut:</label>
                 <input type="text" 
@@ -156,6 +158,7 @@ function Formulario() {
                     ))}
                 </select>
                 }
+
                 <input type="submit" value="guardar" />
             </form>
         </div>

@@ -15,6 +15,7 @@ public class EstudianteController {
     @Autowired
     EstudianteService estudianteService;
 
+
     @GetMapping("/listado")
     public ResponseEntity<List<EstudianteEntity>> obtenerEstudiantes(){
         List<EstudianteEntity> estudiantes = estudianteService.obtenerTodosLosEstudiantes();
@@ -27,6 +28,7 @@ public class EstudianteController {
     public void guardarEstudiante(@RequestBody EstudianteEntity estudiante){
         estudianteService.guardarEstudiante(estudiante);
     }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<EstudianteEntity> obtenerEstudiantePorId(@PathVariable("id") Long id){

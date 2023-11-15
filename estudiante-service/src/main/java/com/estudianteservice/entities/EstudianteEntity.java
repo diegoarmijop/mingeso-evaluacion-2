@@ -23,7 +23,10 @@ public class EstudianteEntity {
     private String rut;
     private String apellidos;
     private String nombres;
-    private String nacimiento;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date nacimiento;
+
     private String tipocolegio;
     private String nombrecolegio;
     private String añoegresocolegio;
@@ -31,4 +34,3 @@ public class EstudianteEntity {
     private int cantidad_cuotas;
 
 }
-
