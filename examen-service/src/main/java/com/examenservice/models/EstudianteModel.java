@@ -1,29 +1,24 @@
-package com.estudianteservice.entities;
+package com.examenservice.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-@Table(name = "estudiante")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class EstudianteEntity {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true, nullable = false)
-    private Long id;
+public class EstudianteModel {
 
     private String rut;
     private String apellidos;
     private String nombres;
-    private String nacimiento;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date nacimiento;
+
     private String tipocolegio;
     private String nombrecolegio;
     private String añoegresocolegio;
@@ -31,4 +26,3 @@ public class EstudianteEntity {
     private int cantidad_cuotas;
 
 }
-
